@@ -8,7 +8,9 @@
       "start": "next start",
       "lint": "next lint",
       "prepare": "husky install",
-      "pre-commit": "next lint --fix && git add ."
+      "pre-commit": "next lint --fix && prettier --write --ignore-path .gitignore . && git add .",
+      "format": "prettier --check --ignore-path .gitignore .",
+      "format:fix": "prettier --write --ignore-path .gitignore ."
    },
    "dependencies": {
       "next": "12.3.1",
@@ -19,6 +21,8 @@
    "devDependencies": {
       "eslint": "8.25.0",
       "eslint-config-next": "12.3.1",
-      "husky": "^8.0.1"
+      "eslint-config-prettier": "^8.5.0",
+      "husky": "^8.0.1",
+      "prettier": "^2.7.1"
    }
 }
