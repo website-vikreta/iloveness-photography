@@ -6,12 +6,9 @@
       "dev": "next dev",
       "build": "next build",
       "start": "next start",
-      "lint": "next lint"
-   },
-   "husky": {
-      "hooks": {
-         "pre-commit": "echo \"[Husky] pre-commit\""
-      }
+      "lint": "next lint",
+      "prepare": "husky install",
+      "pre-commit": "next lint --fix && git add ."
    },
    "dependencies": {
       "next": "12.3.1",
@@ -22,8 +19,6 @@
    "devDependencies": {
       "eslint": "8.25.0",
       "eslint-config-next": "12.3.1",
-      "eslint-config-prettier": "^8.5.0",
-      "husky": "^8.0.1",
-      "prettier": "^2.7.1"
+      "husky": "^8.0.1"
    }
 }
