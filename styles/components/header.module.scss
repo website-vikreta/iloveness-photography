@@ -1,0 +1,14 @@
+@import '../includes';
+
+.header {
+   @include container-spacing;
+   @include flex-end;
+}
+
+.headerImage {
+   max-height: 50px;
+
+   @include responsive(md) {
+      max-height: 30px !important;
+   }
+}

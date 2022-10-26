@@ -1,0 +1,35 @@
+@import '../includes';
+
+.container {
+   @include flex-between;
+   align-items: flex-start;
+   // height: 200vh;
+   width: 100%;
+
+   .textWrapper {
+      font-size: 80px;
+      line-height: 130%;
+   }
+
+   .textWrapper .text {
+      color: transparent;
+      background: linear-gradient(
+         to right,
+         $color-dark-medium 50%,
+         $color-primary-300 50%
+      );
+      background-size: 200% 100%;
+      background-position-x: 100%;
+      background-clip: text;
+      user-select: none;
+      // transition: background 0.5s linear;
+
+      b {
+         font-weight: 900;
+      }
+   }
+}
+
+// p b {
+//    font-weight: 900;
+// }
